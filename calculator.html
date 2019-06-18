@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+<style>
+body{
+    background-color:#a4b0be;
+    
+}
+.calculator{
+    width:400px;
+    height:440px;
+    margin: 20px auto;
+    padding-top: 20px;
+   
+    
+}
+form{
+    background-color:#242424;
+    box-shadow: 0px 1px 12px 2px #ced6e0;
+    
+ 
+}
+
+input{
+    color:#f5f6fa;
+    outline:none;
+   font-size:18px;
+   font-family:'Merriweather',sans-serif;
+   font-weight: bold;
+   position: relative;
+   cursor: pointer;
+
+    
+}
+.first-section{
+    background-color: #000000;
+    height: 118px;
+    width: 397px;
+    border:1px solid  #000000;
+   
+}
+.second-section{
+    width:97px;
+    height:77px;
+    background-color:#242424;
+    color:#f5f6fa;
+    border:1px solid #242424;
+    font-family:'Merriweather',sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+.third-section{
+    width:97px;
+    height:77px;
+    background-color:#ffffff;
+    color:#2c3a4b;
+    border:1px solid #ffffff;
+    font-family:'Lobster',sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+                                                    
+
+}
+.fourth-section{
+    width: 97px;
+    height: 77px;
+    background-color: #ff6600;
+    color: #f5f6fa;
+    border: 1px solid #ff6600;
+    
+}
+.gap{
+    margin-right: -4px;
+    width: 101px;
+}
+#color-1{
+    width: 18px;
+    height: 18px;
+    background-color: #ff5252;
+    border:1px solid  #ff5252;
+    border-radius: 50px;
+    position:absolute;
+    right: 487px;
+    top: 46px;
+    z-index: 1;
+}
+#color-2{
+    width: 18px;
+    height: 18px;
+    background-color: #f5a623;
+    border:1px solid #f5a623 ;
+    border-radius: 50px;
+    position:absolute;
+    right:  515px;
+    top: 46px;
+    z-index: 1;
+}
+#color-3{
+    width: 18px;
+    height: 18px;
+    background-color: #73c21d;
+    border:1px solid  #73c21d;
+    border-radius: 50px;
+    position:absolute;
+    right: 544px;;
+    top: 46px;
+    z-index: 1;
+}
+@keyframes yourAnimation{
+    0%{
+        transform: scale(1);
+        }
+    100%{
+        transform:  scale(1.2);
+        }
+}
+
+.animate-1{
+    animation: yourAnimation 3s infinite 0s linear;
+}
+</style>
+
+</head>
+<body>
+    <div id="color-1" class="animate-1"></div>
+    <div id="color-2"  class="animate-1"></div>
+    <div id="color-3"  class="animate-1"></div>
+     <div class="calculator">
+     <form   name="display">
+         <input  style="font-size:2.3rem"type="text" name="dispalysection" class="first-section">
+       <input type="button" value="7"  onclick="display.dispalysection.value += '7'" class="second-section">
+       <input type="button" value="8" onclick="display.dispalysection.value += '8'" class="second-section">
+       <input type="button" value="9"onclick="display.dispalysection.value += '9' " class="second-section" >
+       <input type="button" value="+" onclick="display.dispalysection.value += '+' " class="third-section">
+       <input type="button" value="4" onclick="display.dispalysection.value += '4' " class="second-section">
+       <input type="button" value="5" onclick="display.dispalysection.value += '5' " class="second-section">
+       <input type="button" value="6"  onclick="display.dispalysection.value += '6' " class="second-section">
+       <input type="button" value="-"  onclick="display.dispalysection.value += '-' " class="third-section">
+       <input type="button" value="1" onclick="display.dispalysection.value += '1' " class="second-section">
+       <input type="button" value="2"  onclick="display.dispalysection.value += '2' " class="second-section">
+       <input type="button" value="3"  onclick="display.dispalysection.value += '3' " class="second-section">
+       <input type="button" value="*"  onclick="display.dispalysection.value += '*' " class="third-section" > 
+       <input type="button" value="0"  onclick="display.dispalysection.value += '0' " class="third-section gap"> 
+       <input type="button" value="/"  onclick="display.dispalysection.value += '/' " class="third-section gap">
+       <input type="button" value="AC"  onclick="display.dispalysection.value =''" class="third-section gap">
+       <input type="button" value="=" onclick="display.dispalysection.value = eval(display.dispalysection.value)"class="fourth-section">
+
+            </form>
+
+     </div>
+</body>
+</html>
